@@ -1,0 +1,51 @@
+<html>
+<body>
+  <h3>Finding the average</h3>
+  Enter Scores of Mark : <br>
+  <input type="text" id="num11" name="box1">
+  <input type="text" id="num12" name="box2">
+  <input type="text" id="num13" name="box3">   
+  
+  Result : 
+  <input type="text" id="result1" name="Box3">
+  <input type="button" value="display result1" onclick="avg1()"><br><br>
+
+  Enter scores of john: <br>
+  <input type="text" id="num21">
+  <input type="text" id="num22">
+  <input type="text" id="num23"> 
+
+  Result:
+  <input type="text" id="result2">
+  <input type="button" value="display result2" onclick="avg2()">
+  
+
+  <script type="text/javascript">
+  function avg1()
+  {
+    var number11 = parseInt(document.getElementById("num11").value);
+    var number12 = parseInt(document.getElementById("num12").value);
+    var number13 = parseInt(document.getElementById("num13").value);
+    var result1 = (number11 + number12+ number13)/3;
+    document.getElementById("result1").value = result1;    
+  }
+  function avg2()
+  {
+    var number21 = parseInt(document.getElementById("num21").value);
+    var number22 = parseInt(document.getElementById("num22").value);
+    var number23 = parseInt(document.getElementById("num23").value);
+    var result2 = (number21+ number22+ number23)/3;
+    document.getElementById("result2").value= result2;
+   }
+
+   if(result1>result2)
+   {
+     alert("mark's average is higher than john's");
+   }
+   else
+   {
+     alert("john's average is higher than mark's");
+   }
+  </script>
+</body>
+</html>
