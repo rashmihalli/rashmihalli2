@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Pizza Ordering</title>
+  </head>
+  <body>
+  <form id="formm">
+    <table>
+	  <tr>
+	  <td>
+	  Name: <input type="text" name="name" style="font-family:arial; font-size:80%; Background:#eee;" required/> <br><br>
+	  Email: <input type="email" name="emailaddress" style="font-family:arial; font-size:80%;Background:#eee;" required/>
+	  </td>
+	  <td align="right">
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<textarea align="right" cols="50" rows="4" name="comments">This TEXTAREA provides context-sensitive help.Click on any input field or use the TAB key to get more information about the input field</textarea>
+	  </td>
+	  </tr>
+	</table><br><br>
+	<b>Toppings:</b>
+	Extra Cheese:<input type="checkbox" name="extracheese" value="extracheese">
+	Pepparoni:<input type="checkbox" name="pepparoni" value="pepparoni">
+	Olives:<input type="checkbox" name="olives" value="olives">
+	Pepper:<input type="checkbox" name="pepper" value="pepper">
+	Bacon:<input type="checkbox" name="bacon" value="bacon">
+	Tomatoes:<input type="checkbox" name="tomatoes" value="tomatoes">
+	Mushrooms:<input type="checkbox" name="mushrooms" value="mushrooms"><br><br>
+	
+	<b>How do you want to get your pizza!</b>Delivery:<input type="radio" name="pizza" value="delivery">
+	Pick Up:<input type="radio" name="pizza" value="pickup"><br><br>
+	
+	<b>Tip?</b> 
+	<select>
+	  <option value="15%">15%</option>
+	  <option value="20%">20%</option>
+	  <option value="25%">25%</option>
+	  </select>
+	  
+	  <hr>
+	  
+	  <b>Address</b><br>
+	  <textarea cols="50" rows="6" name="address" required></textarea><br><br>
+	  
+	  <input type="submit" value="submit"/>
+	  <input type="reset" value="reset"/>
+	</form>
+  </body>
+</html>
+<!--width:600px; -->
