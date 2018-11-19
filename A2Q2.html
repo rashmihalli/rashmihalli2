@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>JavaScript Assignment Question 2</title>
+  </head>
+  <body>
+    <script>
+      var prodidno=parseInt(prompt("enter"));
+      var i;
+
+      if(prodidno==1)
+      {
+         printalldetails1();
+      }
+
+      else
+      {
+         printalldetails2();
+      }
+      
+
+      function product1()
+      {
+         productid = prompt("Enter Product ID","Enter ID");
+	 productname = prompt("Enter Product Name","Enter name");
+	 productprice = prompt("Enter Product Price","Enter Price");
+	 productdescription = prompt("Enter The Product Description","Enter Description");
+      }
+      function product2()
+      {
+         productid = prompt("Enter Product ID","Enter ID");
+	 productname = prompt("Enter Product Name","Enter name");
+	 productprice = prompt("Enter Product Price","Enter Price");
+	 productdescription = prompt("Enter The Product Description","Enter Description");
+      }
+     
+
+      function printalldetails1()
+      {
+        product1();
+        console.log(productid);
+        console.log(productname);
+        console.log(productprice);
+        console.log(productdescription);
+      }
+      function printalldetails2()
+      {
+        product2();
+        console.log(productid);
+        console.log(productname);
+        console.log(productprice);
+        console.log(productdescription);
+      }	  	  
+    </script>
+  </body>
+</html>
