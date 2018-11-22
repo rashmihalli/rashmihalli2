@@ -15,6 +15,9 @@ public class DateDifferenceProvider
 	static final int NOV = 30;
 	static final int DEC = 31;
 	
+	/*static final int LeapYear = 366;
+	static final int NonLeapYear = 365;*/
+	
 	static int[] months = {JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC};
 	
 	public static int getDateDifference(MyDate startDate, MyDate endDate)
@@ -36,11 +39,9 @@ public class DateDifferenceProvider
 		}
 		
 		else{
-			return remainingDaysofMonth(startDate) + NoofDaysInYear(startDate, endDate) ;
+			return   remainingDaysofMonth(startDate) + NoofDaysInYear(startDate, endDate)+ interviningDaysofMonth1(startDate)+LeadingYear(endDate)- remainingDaysofMonth(endDate); 
 		
 		}
-		
-		
 		
 	}
 
@@ -78,11 +79,46 @@ public class DateDifferenceProvider
 	private static int NoofDaysInYear(MyDate startDate, MyDate endDate)
 	{
 		int remainDays = 0;
-		for(int index=startDate.getYyyy(); index<endDate.getYyyy(); index++)
+		for(int index=startDate.getYyyy()+1; index<endDate.getYyyy(); index++)
 		{
+			if(checkLeapYear(startDate) && )
+			{
+				remainDays = remainDays + 366;
+			}
 			remainDays = remainDays + 365; 
 		}
 		return remainDays;
+	}
+	
+	private static int LeadingYear(MyDate endDate)
+	{
+		int leadingDays = 0;
+		
+		for(int index=0; index< endDate.getMm(); index++ )
+		{
+			leadingDays = leadingDays + months[index];
+		}
+		return leadingDays;
+	}
+	
+	private static int interviningDaysofMonth1(MyDate startDate)
+	{
+		int totalDays = 0;
+		for(int index=startDate.getMm()+1; index<=12; index++)
+		{
+			totalDays = totalDays+months[index-1];
+		}
+		return totalDays;
+	}
+	
+	private static boolean checkLeapYear(MyDate Date)
+	{
+		if((Date.getYyyy())%4==0 || ((Date.getYyyy())%100==0 && (Date.getYyyy())%400==0))
+		
+			return true;
+		else
+		    return false;
+		
 	}
 	
 

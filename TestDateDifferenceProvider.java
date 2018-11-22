@@ -13,7 +13,7 @@ public class TestDateDifferenceProvider
 		TestRecords[2] = new TestRecord(new MyDate(06,04,2011), new MyDate(18,05,2011), 42);
 		TestRecords[3] = new TestRecord(new MyDate(06,04,2011), new MyDate(18,06,2011), 73);
 		TestRecords[4] = new TestRecord(new MyDate(06,04,2011), new MyDate(18,12,2011), 256);
-		TestRecords[5] = new TestRecord(new MyDate(06,04,2010), new MyDate(18,12,2011), 622);
+		TestRecords[5] = new TestRecord(new MyDate(06,04,2011), new MyDate(18,12,2012), 621);
 		
 		for(TestRecord TestRec: TestRecords)
 		{
